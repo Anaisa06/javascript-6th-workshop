@@ -1,0 +1,43 @@
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;    
+}
+
+/* h1,
+h2,
+h3{
+    margin: 0;
+    padding: 0;
+} */
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    background-color: #0d2433;
+    color: white;
+}
+
+h2{
+    text-align: center;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 0.5rem;
+    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    color: #0d2433;
+    font-weight: 700;
+    cursor: pointer;
+    margin-top: 15px;
+}
