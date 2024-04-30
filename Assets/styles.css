@@ -41,9 +41,16 @@ button {
 }
 
 .code-img{
+  width: 600px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
 }
-.img-3{
-  width: 70%;
+
+.code-img > img {
+  width: 100%;
 }
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop 6</title>
+    <link rel="stylesheet" href="/Assets/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Taller de Fundamentos avanzados</h1>   
+    </header>
+    <main>
+        <hr>
+        <h2>Sección 1 - Scope y Hoisting</h2>
+        <hr>
+        <section>
+            <h3>Ejercicio 1: El quiz del Scope</h3>
+            <p>Según el siguiente código, responde las respuestas acerca de la accesibilidad de las variables en las distintas partes del código.</p>
+            <div class="code-img img-1">
+                <img src="/Assets/images/img-1.png">                
+            </div>
+            <button type="button" id="btn-1">Inténtalo</button>
+        </section>
+        <hr>
+        <section>
+            <h3>Ejercicio 2: Hoisting en Práctica</h3>
+            <p>Según el siguiente código, intenta predecir el resultado de las operaciones.</p>
+            <div class="code-img img-2">
+                <img src="/Assets/images/img-2.png">                  
+            </div>
+            <button type="button" id="btn-2">Inténtalo</button>
+        </section>
+
+        <hr>
+        <h2>Sección 2: Funciones, Closures y Asincronía</h2><hr>   
+
+        <section>
+            <h3>Ejercicio 3: Closures en Acción</h3>
+            <p>Mira el siguiente código para entender el funcionamiento del closure.</p>
+            <div class="code-img">
+              <img class="img-3" src="/Assets/images/img-3.png">
+            </div>
+            <p>Al ejecutar este código la consola mostrará el número 8. Esto es debido al mecanismo de closure, esto significa que la función "recuerda" su ámbito externo y puede acceder a sus variables incluso cuando la función externa ya ha terminado.</p>          
+        </section>
+        <hr>
+
+        <section>
+            <h3>Ejercicio 4: Funciones Declaradas vs Expresadas</h3>
+            <p>Mira el siguiente código y trata de predecir que pasará cuando se ejecute. Presiona el botón para ver el resultado.</p>
+            <div class="code-img img-4">
+              <img class="img-4" id="img-4" src="/Assets/images/img-4.png" style="display: block;">
+              <img class="img-4-2" id="img-4-2" src="/Assets/images/img-4.2.png" style="display: none;">                
+            </div>
+            <p class="questions">
+                - ¿Qué sucedió cuando intentaste llamar a las funciones antes de su declaración?<br><span class="showText" style="display: none;">La función declarada se ejecutó sin problemas, pero la función expresada devolvió un error.<br><br></span>
+                - ¿Cómo difieren los resultados entre la función declarada y la función expresada?<br><span class="showText" style="display: none;">Las funciones declaradas se puede ejecutar sin haber sido declaradas en ese punto del código, mientras que las expresadas no<br><br></span>
+                - ¿Qué indica esto sobre cómo el JavaScript maneja estas dos diferentes declaraciones de funciones?<br><span class="showText" style="display: none;">El hoisting de las funciones declaradas las "eleva" en el ámbito en el que estén; para las funciones expresadas, se eleva la variable a la que fue asignada más no su contenido</span>
+            </p>
+            <button type="button" id="result-btn">Resultado</button>
+        </section>
+        <hr>
+        
+        <section>
+            <h3>Ejercicio 7: Asincronía</h3>
+            <p>Revisa el siguiente código y trata de predecir el orden en el que se mostrarán los mensajes en la consola. Después verás una imagen con el resultado.</p>
+            <div class="code-img">
+                <img class="img-7" id="img-7" src="/Assets/images/img-7.png">
+                <img id="img-7-2" src="/Assets/images/img-7-2.png" style="display: none;">
+            </div>
+            <button type="button" id="excercise-7-btn">Inténtalo</button>
+        </section>
+    </main>
+
+    <script src="/Section-1/app-1.js"></script>
+    <script src="/Section-2/app-2.js"></script>
+    <script src="/Section-2/examples.js"></script>
+</body>
+</html>
