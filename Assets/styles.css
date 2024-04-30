@@ -4,13 +4,6 @@ html {
     padding: 0;    
 }
 
-/* h1,
-h2,
-h3{
-    margin: 0;
-    padding: 0;
-} */
-
 body {
     display: flex;
     flex-direction: column;
@@ -18,6 +11,11 @@ body {
     align-items: center;    
     background-color: #0d2433;
     color: white;
+}
+
+main {
+  width: 90%;
+  max-width: 1000px;
 }
 
 h2{
@@ -40,4 +38,12 @@ button {
     font-weight: 700;
     cursor: pointer;
     margin-top: 15px;
+}
+
+.code-img{
+  display: flex;
+  justify-content: center;
+}
+.img-3{
+  width: 70%;
 }
