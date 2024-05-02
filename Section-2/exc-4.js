@@ -1,17 +1,8 @@
 
-//Closures
-function crearSumador(numero) {
-    return function(numero2) {
-      return numero + numero2
-    }
-  }
+
+
   
-  let sumarCinco = crearSumador(5) //Edita entre el parénstesis el primer número a sumar
-  let sumaTotal = sumarCinco(3) //Edita entre el paréntesis el segundo número a sumar
-  
-  console.log(sumaTotal)
-  
-  //Funciones Declaradas vs Expresadas
+  //Ejercicio 4: Funciones Declaradas vs Expresadas
   console.log(
     "Intentando llamar a 'funcionDeclarada' antes de su declaración:"
   );
@@ -48,3 +39,23 @@ function crearSumador(numero) {
   console.log("Llamando a 'funcionExpresada' después de su declaración:");
   console.log(funcionExpresada());
   
+
+//DOM
+
+
+//Obtener elementos de DOM
+const image4 = document. getElementById("img-4-2")
+const resultButton = document.getElementById("result-btn")
+const answersText = document.getElementsByClassName("showText")
+
+//Función para cambiar el display de none a block
+const showAnswer = function(){
+  image4.style.display = "block"
+  for (let i = 0; i < answersText.length; i++) {
+    answersText[i].style.display = "block";
+  } 
+}
+
+//Event listener para cuando el usuario clickee el botón, ejecutar la función
+resultButton.addEventListener("click", showAnswer)
+
