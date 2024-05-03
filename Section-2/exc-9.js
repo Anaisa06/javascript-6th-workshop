@@ -17,7 +17,6 @@ function excercise9() {
         }, userTimeout*1000)
     })
 
-
     myPromise
     .then(result => {
         alert(result)
@@ -37,11 +36,10 @@ function excercise9() {
         .catch(error => {
             console.error('Error:', error);
         });
-    })
-    .catch(error => {
-        console.error("Ups, algo salió mal")
-    })
+    })  
 }
 
 
 //DOM
+const excNineBtn = document.getElementById("excercise-9-btn")
+excNineBtn.addEventListener("click", excercise9)
