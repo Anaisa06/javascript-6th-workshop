@@ -27,3 +27,21 @@ function manejarAsincronia(callback, promise){
   
   //Llamar la función para ejecutar el programa
   manejarAsincronia(myCallback, myPromise)
+
+
+// let promise
+// function myFunction(promise){
+//   const lista = ["hola", "mundo"]
+//   promise = new Promise ((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(lista.join(" "))
+//     }, 1000)
+//   })
+
+//   promise
+//   .then(mensaje => {
+//     console.log(mensaje)
+//   })
+// }
+
+// myFunction(promise)

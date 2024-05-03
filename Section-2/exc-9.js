@@ -8,32 +8,40 @@ function checkNum (variable){
     variable = parseFloat(variable)
     return variable   
 }
+function excercise9() {
+    let userTimeout = checkNum(prompt("Ingresa el número de segundos en el que quieres que se ejecute el programa"))
 
-let userTimeout = checkNum(prompt("Ingresa el número de segundos en el que quieres que se ejecute el programa"))
-
-const myPromise = new Promise ((resolve, reject) => {
-    setTimeout(() => {
-        resolve("setTimeout ejecutado")
-    }, userTimeout*1000)
-})
-
-
-myPromise
-.then(result => {
-    alert(result)
-})
-
-fetch('https://jsonplaceholder.typicode.com/posts')
-    .then(response => {
-        if(!response.ok){
-            throw new Error("Ups, algo salió mal obteniendo los datos")
-        } 
-        return response.json()
-        
+    const myPromise = new Promise ((resolve, reject) => {
+        setTimeout(() => {
+            resolve("setTimeout ejecutado")
+        }, userTimeout*1000)
     })
-    .then( data => {
-        console.log(data)
+
+
+    myPromise
+    .then(result => {
+        alert(result)
+    })
+    .then(() => {
+        fetch('https://jsonplaceholder.typicode.com/posts')
+        .then(response => {
+            if(!response.ok){
+                throw new Error("Ups, algo salió mal obteniendo los datos")
+            } 
+            return response.json()
+            
+        })
+        .then( data => {
+            console.log(data)
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
     })
     .catch(error => {
-        console.error('Error:', error);
-    });
+        console.error("Ups, algo salió mal")
+    })
+}
+
+
+//DOM
