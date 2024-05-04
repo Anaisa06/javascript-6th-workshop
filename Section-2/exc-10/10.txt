@@ -1,0 +1,12 @@
+¿Qué tareas se consideran macrotareas y cuáles son microtareas?
+ Macrotareas: setTimeout
+ Microtareas: Promesas
+
+¿Cómo se relacionan las macrotareas y microtareas con el event loop?
+El event loop se encarga de 'definir' el orden en el que se ejecutan las tareas asíncronas. Las macrotareas y las microtareas se ponen en cola hasta que se termina de ejecutar el código, y después se empiezan a ejecutar las microtareas; una vez la cola de microtareas termina, se ejecutan las macrotareas en orden.
+
+¿Qué sucede cuando una microtarea genera una nueva macrotarea dentro de ella?
+Se pone la macrotarea en la queue de macrotareas y se ejecuta una vez no hayan microtareas pendientes
+
+¿Cómo se manejan las promesas y los setTimeout en relación con el event loop?
+Las promesas son microtareas, por lo tanto se ejecutan primero que las macrotareas, como los setTimeout
